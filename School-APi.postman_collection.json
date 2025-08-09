@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "ebf77f83-92e0-4884-b53b-2fdf34a8e3ac",
+		"name": "School-APi",
+		"description": "This collection contains APIs for managing schools: adding schools and listing them by proximity.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25134899"
+	},
+	"item": [
+		{
+			"name": "post-school",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Green Valley High School\",\n  \"address\": \"123 Green Street, Springfield\",\n  \"latitude\": 40.73061,\n  \"longitude\": -73.935242\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/addSchool",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"addSchool"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-nearby-schools",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/listSchools",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"listSchools"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
